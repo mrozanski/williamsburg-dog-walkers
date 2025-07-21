@@ -187,7 +187,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Toggle menu function
     function toggleMenu(forceState) {
-        console.log('toggleMenu');
         const isOpen = navMenu.classList.contains('active');
         const shouldOpen = forceState !== undefined ? forceState : !isOpen;
         if (shouldOpen) {
@@ -201,12 +200,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Click/touch event
-    hamburger.addEventListener('click', function(e) {
-        e.stopPropagation();
-        toggleMenu();
-    });
-    hamburger.addEventListener('touchstart', function(e) {
+    // Use pointerup for robust cross-device support
+    hamburger.addEventListener('pointerup', function(e) {
         e.stopPropagation();
         toggleMenu();
     });
@@ -232,7 +227,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', function(e) {
         if (window.innerWidth > 980) return;
         if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
-            console.log('clicked outside');
             toggleMenu(false);
         }
     });
