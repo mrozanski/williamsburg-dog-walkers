@@ -79,21 +79,23 @@ body {
 }
 
 .hero-content {
-    max-width: 800px;
-    padding: 0 20px;
+    max-width: 80%;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .hero-title {
     font-family: 'Dancing Script', cursive;
     font-size: 4rem;
-    color: #f3eeac;
+    color: #f4ebd0;
     margin-bottom: 1rem;
     font-weight: 700;
+    text-shadow: 0.06em 0.06em 0em #4c4b4b;
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
-    color: #170f07;
+    color: #fff;
     font-weight: 300;
 }
 
@@ -420,11 +422,11 @@ section {
     }
     
     .hero-title {
-        font-size: 2rem;
+        font-size: 2.8rem;
     }
     
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     
     .section-title {
