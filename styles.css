@@ -1,3 +1,24 @@
+:root {
+  /* Brand, highlights, headings */
+  --color-primary: #8b4513;
+  /* Secondary highlights, hero title */
+  --color-secondary: #f4ebd0;
+  /* Accents, buttons, etc. */
+  --color-accent: #fff;
+  /* Main text */
+  --color-text: #333;
+  /* Main background */
+  --color-background: #fefefe;
+  /* Card/section backgrounds */
+  --color-surface: #fff;
+  /* Alternate surface (e.g., testimonials, services) */
+  --color-surface-alt: #f8f8f8;
+  /* Muted/secondary text */
+  --color-text-muted: #555;
+  /* Even lighter text */
+  --color-text-light: #777;
+}
+
 /* Reset and base styles */
 * {
     margin: 0;
@@ -8,8 +29,8 @@
 body {
     font-family: 'Merriweather', serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #fefefe;
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 
 .container {
@@ -67,14 +88,14 @@ body {
 
 .nav-menu a {
     text-decoration: none;
-    color: #333;
+    color: var(--color-text);
     font-family: 'Raleway', sans-serif;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: #8b4513;
+    color: var(--color-primary);
 }
 
 /* Hero Section */
@@ -98,7 +119,7 @@ body {
 .hero-title {
     font-family: 'Dancing Script', cursive;
     font-size: 4rem;
-    color: #f4ebd0;
+    color: var(--color-secondary);
     margin-bottom: 1rem;
     font-weight: 700;
     text-shadow: 0.06em 0.06em 0em #4c4b4b;
@@ -106,7 +127,7 @@ body {
 
 .hero-subtitle {
     font-size: 1.5rem;
-    color: #fff;
+    color: var(--color-accent);
     font-weight: 300;
 }
 
@@ -118,7 +139,7 @@ section {
 .section-title {
     font-family: 'Dancing Script', cursive;
     font-size: 3rem;
-    color: #8b4513;
+    color: var(--color-primary);
     text-align: center;
     margin-bottom: 3rem;
     font-weight: 700;
@@ -126,7 +147,7 @@ section {
 
 /* About Section */
 .about {
-    background: #fff;
+    background: var(--color-surface);
     position: relative;
 }
 .about-content {
@@ -139,7 +160,7 @@ section {
 .about-text p {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
-    color: #555;
+    color: var(--color-text-muted);
 }
 
 .about-image img {
@@ -151,7 +172,7 @@ section {
 
 /* Services Section */
 .services {
-    background: #f8f8f8;
+    background: var(--color-surface-alt);
 }
 
 .services-grid {
@@ -161,7 +182,7 @@ section {
 }
 
 .service-card {
-    background: white;
+    background: var(--color-surface);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -176,14 +197,14 @@ section {
 .service-card h3 {
     font-family: 'Raleway', sans-serif;
     font-size: 1.5rem;
-    color: #8b4513;
+    color: var(--color-primary);
     margin-bottom: 1rem;
     font-weight: 600;
 }
 
 .service-card .price {
     font-size: 1.3rem;
-    color: #8b4513;
+    color: var(--color-primary);
     font-weight: 700;
     margin-bottom: 1rem;
 }
@@ -203,38 +224,38 @@ section {
     content: "✓";
     position: absolute;
     left: 0;
-    color: #8b4513;
+    color: var(--color-primary);
     font-weight: bold;
 }
 
 /* Service Area Section */
 .service-area {
-    background: white;
+    background: var(--color-surface);
     text-align: center;
 }
 
 .area-content h3 {
     font-family: 'Raleway', sans-serif;
     font-size: 1.8rem;
-    color: #8b4513;
+    color: var(--color-primary);
     margin-bottom: 1rem;
     font-weight: 600;
 }
 
 .area-content p {
     font-size: 1.2rem;
-    color: #555;
+    color: var(--color-text-muted);
     margin-bottom: 0.5rem;
 }
 
 .area-content em {
-    color: #777;
+    color: var(--color-text-light);
     font-size: 1rem;
 }
 
 /* Testimonials Section */
 .testimonials {
-    background: #f8f8f8;
+    background: var(--color-surface-alt);
 }
 
 .testimonials-grid {
@@ -244,7 +265,7 @@ section {
 }
 
 .testimonial-card {
-    background: white;
+    background: var(--color-surface);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -255,7 +276,7 @@ section {
 .testimonial-card p {
     font-style: italic;
     font-size: 1.1rem;
-    color: #555;
+    color: var(--color-text-muted);
     margin-bottom: 1rem;
     line-height: 1.8;
 }
@@ -263,20 +284,20 @@ section {
 .testimonial-card cite {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    color: #8b4513;
+    color: var(--color-primary);
     font-style: normal;
 }
 
 /* Contact Section */
 .contact {
-    background: white;
+    background: var(--color-surface);
     text-align: center;
 }
 
 .contact-content h3 {
     font-family: 'Raleway', sans-serif;
     font-size: 1.8rem;
-    color: #8b4513;
+    color: var(--color-primary);
     margin-bottom: 1rem;
     margin-top: 2rem;
     font-weight: 600;
@@ -288,14 +309,14 @@ section {
 
 .contact-content p {
     font-size: 1.1rem;
-    color: #555;
+    color: var(--color-text-muted);
     margin-bottom: 1rem;
 }
 
 /* Footer */
 .footer {
-    background: #333;
-    color: white;
+    background: var(--color-text);
+    color: var(--color-accent);
     text-align: center;
     padding: 2rem 0;
 }
@@ -482,7 +503,7 @@ section {
   left: 0;
   right: 0;
   width: 100%;
-  background: #fff;
+  background: var(--color-surface);
   box-shadow: 0 8px 24px rgba(0,0,0,0.08);
   flex-direction: column;
   align-items: flex-start;
