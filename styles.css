@@ -26,32 +26,43 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1rem 0;
+    height: 84px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: height 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    height: 100%;
+    position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
+
 .nav-logo {
     position: absolute;
+    top: 0;
     left: 165px;
+    z-index: 2;
 }
+
 .nav-logo img {
-    max-height: 135px;
+    height: 136px;
+    width: 136px;
     margin-top: 16px;
-    width: 135px;
+    transition: height 0.3s ease, width 0.3s ease, margin-top 0.3s ease;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
     gap: 2rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-menu a {
@@ -513,10 +524,9 @@ section {
   margin-right: 1rem;
 }
 .nav-logo img {
-  width: 70px;
-  height: 70px;
+  width: 136px;
+  height: 136px;
   object-fit: contain;
-  margin: 0;
 }
 
 /* Hide hamburger on desktop, show on mobile */
@@ -544,6 +554,31 @@ section {
   .nav-menu a {
     font-size: 1rem;
     padding: 0;
+  }
+  
+  /* Desktop navbar scroll animation */
+  .navbar {
+    height: 84px;
+    transition: height 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .navbar .nav-logo img {
+    height: 136px;
+    width: 136px;
+    margin-top: 84px;
+    transition: height 0.3s ease, width 0.3s ease, margin-top 0.3s ease;
+  }
+  
+  .navbar.navbar-scrolled {
+    height: 48px;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .navbar.navbar-scrolled .nav-logo img {
+    height: 80px;
+    width: 80px;
+    margin-top: 48px;
   }
 }
 

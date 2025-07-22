@@ -122,16 +122,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 100);
 });
 
-// Navbar scroll effect
+// Throttled scroll handler for navbar animation
+let scrollTimeout;
 window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+    if (scrollTimeout) {
+        return;
     }
+    
+    scrollTimeout = setTimeout(function() {
+        const navbar = document.querySelector('.navbar');
+        const scrollPosition = window.scrollY;
+        
+        // Only apply scroll animation on desktop (min-width: 981px)
+        if (window.innerWidth >= 981) {
+            if (scrollPosition > 0) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        }
+        
+        scrollTimeout = null;
+    }, 16); // ~60fps throttling
 });
 
 // Service card hover effects
@@ -238,6 +250,20 @@ document.addEventListener('DOMContentLoaded', function() {
             hamburger.setAttribute('aria-expanded', 'false');
             hamburger.setAttribute('aria-label', 'Open navigation menu');
         }
+        
+        // Reset navbar scroll state when switching between mobile/desktop
+        const navbar = document.querySelector('.navbar');
+        if (window.innerWidth >= 981) {
+            // On desktop, restore scroll state
+            if (window.scrollY > 0) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        } else {
+            // On mobile, remove scroll state
+            navbar.classList.remove('navbar-scrolled');
+        }
     });
 })();
 
@@ -255,6 +281,12 @@ window.addEventListener('scroll', function() {
 // Add loading animation
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
+    
+    // Initialize navbar scroll state
+    const navbar = document.querySelector('.navbar');
+    if (window.innerWidth >= 981 && window.scrollY > 0) {
+        navbar.classList.add('navbar-scrolled');
+    }
 });
 
 // Preload images for better performance
