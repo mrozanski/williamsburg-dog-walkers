@@ -132,7 +132,7 @@ body {
 
 .hero-subtitle {
     font-size: 1.5rem;
-    color: var(--color-accent);
+    color: var(--color-secondary);
     font-weight: 300;
 }
 
