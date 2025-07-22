@@ -1,14 +1,14 @@
 # Color Scheme Options for The Williamsburg Dog Walkers
 
-Based on your current website structure and the need to inspire trust while communicating caring, personalized service for your Williamsburg, Brooklyn target audience, here are four carefully curated color palette options. Each palette complements your white and brown Boston terrier imagery and appeals to middle-class singles, couples, and small families.
+ Curated color palette options to inspire trust while communicating caring, personalized service for the Williamsburg, Brooklyn target audience. Each palette complements the white and brown Boston terrier imagery and appeals to middle-class singles, couples, and small families.
 
 ## Preview Links
 
-- [Option 1: Warm Earth Tones (Default)](index.html)
-- [Option 1b: Warm Earth Tones (Deeper Alt) — Warm Sand #E9D8B4](index.html?option=1b)
-- [Option 2: Soft Blues & Warm Grays](index.html?option=2)
-- [Option 3: Forest Green & Natural Tones](index.html?option=3)
-- [Option 4: Williamsburg Trendy Pastels](index.html?option=4)
+- [Option 1: Warm Earth Tones (Default)](https://mrozanski.github.io/williamsburg-dog-walkers/)
+- [Option 1b: Warm Earth Tones (Deeper Alt) — Warm Sand #E9D8B4](https://mrozanski.github.io/williamsburg-dog-walkers/?option=1b)
+- [Option 2: Soft Blues & Warm Grays](https://mrozanski.github.io/williamsburg-dog-walkers/?option=2)
+- [Option 3: Forest Green & Natural Tones](https://mrozanski.github.io/williamsburg-dog-walkers/?option=3)
+- [Option 4: Williamsburg Trendy Pastels](https://mrozanski.github.io/williamsburg-dog-walkers/?option=4)
 
 ---
 
