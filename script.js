@@ -1,3 +1,13 @@
+(function() {
+  const params = new URLSearchParams(window.location.search);
+  const option = params.get('option');
+  if (option && ['1b', '2', '3', '4'].includes(option)) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `palette-option${option}.css`;
+    document.head.appendChild(link);
+  }
+})();
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

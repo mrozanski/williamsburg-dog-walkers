@@ -1,22 +1,22 @@
 :root {
-  /* Brand, highlights, headings */
-  --color-primary: #8b4513;
-  /* Secondary highlights, hero title */
-  --color-secondary: #f4ebd0;
-  /* Accents, buttons, etc. */
-  --color-accent: #fff;
-  /* Main text */
-  --color-text: #333;
-  /* Main background */
-  --color-background: #fefefe;
-  /* Card/section backgrounds */
-  --color-surface: #fff;
-  /* Alternate surface (e.g., testimonials, services) */
-  --color-surface-alt: #f8f8f8;
-  /* Muted/secondary text */
-  --color-text-muted: #555;
-  /* Even lighter text */
-  --color-text-light: #777;
+    /* Brand, highlights, headings - warm terracotta */
+    --color-primary: #CC6633;
+    /* Secondary highlights, hero title - warm cream */
+    --color-secondary: #F7F3E9;
+    /* Accents, buttons - soft white */
+    --color-accent: #FDFBF7;
+    /* Main text - warm charcoal */
+    --color-text: #2C2C2C;
+    /* Main background - off-white */
+    --color-background: #FEFCF8;
+    /* Card/section backgrounds - pure white */
+    --color-surface: #FFFFFF;
+    /* Alternate surface - sage green accent */
+    --color-surface-alt: #f8f8f8;
+    /* Muted/secondary text - warm gray */
+    --color-text-muted: #5A5A5A;
+    /* Even lighter text - light warm gray */
+    --color-text-light: #8B8680;
 }
 
 /* Reset and base styles */
@@ -41,7 +41,7 @@ body {
 
 /* Navigation */
 .navbar {
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--color-surface-alt);
     backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
@@ -49,7 +49,8 @@ body {
     z-index: 1000;
     height: 84px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: height 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    transition: height 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
 }
 
 .nav-container {
@@ -592,7 +593,8 @@ section {
   
   .navbar.navbar-scrolled {
     height: 48px;
-    background: rgba(255, 255, 255, 0.98);
+    background: var(--color-surface-alt);
+    opacity: 0.8;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
   }
   
