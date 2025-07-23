@@ -258,6 +258,23 @@ section {
     font-size: 1rem;
 }
 
+.area-map {
+    display: block;
+    margin: 2rem auto 0 auto;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 600px) {
+    .area-map {
+        max-width: 95vw;
+        margin-top: 1.2rem;
+    }
+}
+
 /* Testimonials Section */
 .testimonials {
     background: var(--color-surface-alt);
