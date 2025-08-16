@@ -106,10 +106,10 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: url('./cover-dog.jpg') no-repeat center center;
+    background: url('./cover-dog.jpg') no-repeat center left;
     background-size: cover;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     text-align: center;
     position: relative;
@@ -118,7 +118,7 @@ body {
 .hero-content {
     max-width: 80%;
     padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .hero-title {
@@ -256,23 +256,6 @@ section {
 .area-content em {
     color: var(--color-text-light);
     font-size: 1rem;
-}
-
-.area-map {
-    display: block;
-    margin: 2rem auto 0 auto;
-    max-width: 400px;
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-}
-
-@media (max-width: 600px) {
-    .area-map {
-        max-width: 95vw;
-        margin-top: 1.2rem;
-    }
 }
 
 /* Testimonials Section */
